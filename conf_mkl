@@ -1,0 +1,2 @@
+#!/bin/bash
+./configure --disable-threads --enable-debug --enable-double --prefix=/home/cburmei/owl/programs/gromacs_msdsh/ --with-fft=mkl LIBS="-L${MKLROOT}/lib/em64t -lmkl_lapack -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lguide -lpthread -lm"

@@ -1,0 +1,41 @@
+;
+;	File 'topol.top' was generated
+;	By user: groenhof (503)
+;	On host: pool-161-102.mpibpc.intern
+;	At date: Mon Jan  7 15:26:40 2013
+;
+;	This is your topology file
+;	"I Want to Know Right Now" (Meatloaf)
+;
+; Include forcefield parameters
+#include "ffG43a2.itp"
+; Include water topology
+[ moleculetype ]
+; molname	nrexcl
+QM		3
+
+; Include Position restraint file
+#ifdef POSRES
+#include "posre.itp"
+#endif
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include generic topology for ions
+#include "ions.itp"
+
+#include "spce.itp"
+
+[ system ]
+; Name
+water
+
+[ molecules ]
+; Compound        #mols
+SOL              256
+

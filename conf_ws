@@ -1,0 +1,3 @@
+#!/bin/bash
+./configure --disable-threads --enable-debug --enable-double --prefix=/home/cburmei/phd/devel/programs/gromacs_msdsh --with-fft=mkl LIBS="-L/usr/local/intel/mkl/10.2.0.013/lib/em64t -lmkl_lapack -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lguide -lpthread -lm"
+
